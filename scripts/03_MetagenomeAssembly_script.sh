@@ -16,30 +16,28 @@ module load quast
 
 # input value
 
-DNA_Trimmed=/home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/DNA_trimmed/
+DNA_Trimmed=/home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/DNA_trimmed
 
-Assembly=/home/matiab/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly/
-
-Evaluation_Folder=/home/matiab/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly_Evaluation/
+Output=/home/matiab/1MB462_GenomeAnalysis/03_Metagenome_Assembly
 
 # Commands 
 
-# Create new directory for Assembly and evaluation 
-
-mkdir ~/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly
+# Create new directory for Evaluation 
 
 mkdir ~/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly_Evaluation
 
 # Run Metagenomic Assembly 
 
 megahit --kmin-1pass --k-min 65 --k-max 105 --k-step 10 \
--1 ${DNA_Trimmed}*_1.paired.trimmed.fastq.gz \
--2 ${DNA_Trimmed}*_2.paired.trimmed.fastq.gz \
--o ${Assembly}
+-1 ${DNA_Trimmed}/Site_D1_DNA_1.paired.trimmed.fastq.gz,\
+${DNA_Trimmed}/Site_D3_DNA_1.paired.trimmed.fastq.gz \
+-2 ${DNA_Trimmed}/Site_D1_DNA_2.paired.trimmed.fastq.gz,\
+${DNA_Trimmed}/Site_D3_DNA_2.paired.trimmed.fastq.gz \
+-o ${Output}/Assembly/
 
 # Run the assembly evalution 
 
-metaquast.py -t 2 ${Assembly} -o ${Evaluation_Folder} \
--1 ${DNA_Trimmed}*_1.paired.trimmed.fastq.gz \
--2 ${DNA_Trimmed}*_2.paired.trimmed.fastq.gz
+metaquast.py -t 2 ${Output}/Assembly/ -o ${Output}/Assembly_Evaluation/ \
+-1 ${DNA_Trimmed}/*_1.paired.trimmed.fastq.gz \
+-2 ${DNA_Trimmed}/*_2.paired.trimmed.fastq.gz
  

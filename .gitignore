@@ -3,3 +3,7 @@
 *.gz
 *.trimlog
 *.out
+*_fastqc.html
+*.txt
+*.svg
+*.png

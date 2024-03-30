@@ -11,7 +11,7 @@
 # Load modules
 module load bioinfo-tools
 module load FastQC
-
+module load MultiQC
 # Commands 
 
 # Create new directories for the results
@@ -24,6 +24,11 @@ mkdir ~/1MB462_GenomeAnalysis/02_Preprocessing/Quality_Control/RNA_Untrimmed
 fastqc -o ~/1MB462_GenomeAnalysis/02_Preprocessing/Quality_Control/DNA_Trimmed \
 -t 2 ~/1MB462_GenomeAnalysis/01_Raw_Data/DNA_trimmed/*.trimmed.fastq.gz
 
+multiqc ~/1MB462_GenomeAnalysis/02_Preprocessing/Quality_Control/DNA_Trimmed -p
+
 # RNA untrimmed quality control
 fastqc -o ~/1MB462_GenomeAnalysis/02_Preprocessing/Quality_Control/RNA_Untrimmed \
 -t 2 ~/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/*.fastq.gz
+
+multiqc ~/1MB462_GenomeAnalysis/02_Preprocessing/Quality_Control/RNA_Untrimmed -p
+

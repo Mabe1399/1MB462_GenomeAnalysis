@@ -6,7 +6,7 @@
 #SBATCH -t 03:00:00
 #SBATCH -J RNA_Trimming 
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user matias.becker-burrgos.1399@student.uu.se
+#SBATCH --mail-user matias.becker-burgos.1399@student.uu.se
 
 # Load modules
 module load bioinfo-tools

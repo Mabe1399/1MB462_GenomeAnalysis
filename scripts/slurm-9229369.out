@@ -1,0 +1,170 @@
+mkdir: cannot create directory ‘/home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Quality_Control/DNA_Trimmed’: File exists
+mkdir: cannot create directory ‘/home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Quality_Control/RNA_Untrimmed’: File exists
+Started analysis of Site_D1_DNA_1.paired.trimmed.fastq.gz
+Started analysis of Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 5% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 5% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 10% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 10% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 15% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 15% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 20% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 20% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 25% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 25% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 30% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 30% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 35% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 35% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 40% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 40% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 45% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 45% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 50% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 50% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 55% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 55% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 60% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 60% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 65% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 65% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 70% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 70% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 75% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 75% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 80% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 80% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 85% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 85% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 90% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 90% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Approx 95% complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Approx 95% complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Analysis complete for Site_D1_DNA_2.paired.trimmed.fastq.gz
+Started analysis of Site_D3_DNA_1.paired.trimmed.fastq.gz
+Analysis complete for Site_D1_DNA_1.paired.trimmed.fastq.gz
+Started analysis of Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 5% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 5% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 10% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 10% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 15% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 15% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 20% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 20% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 25% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 25% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 30% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 30% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 35% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 35% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 40% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 40% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 45% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 45% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 50% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 50% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 55% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 55% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 60% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 60% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 65% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 65% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 70% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 70% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 75% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 75% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 80% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 80% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 85% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 85% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 90% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 90% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Approx 95% complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Approx 95% complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Analysis complete for Site_D3_DNA_1.paired.trimmed.fastq.gz
+Analysis complete for Site_D3_DNA_2.paired.trimmed.fastq.gz
+Started analysis of Site_D1_RNA_1.fastq.gz
+Started analysis of Site_D1_RNA_2.fastq.gz
+Approx 5% complete for Site_D1_RNA_1.fastq.gz
+Approx 5% complete for Site_D1_RNA_2.fastq.gz
+Approx 10% complete for Site_D1_RNA_1.fastq.gz
+Approx 10% complete for Site_D1_RNA_2.fastq.gz
+Approx 15% complete for Site_D1_RNA_1.fastq.gz
+Approx 15% complete for Site_D1_RNA_2.fastq.gz
+Approx 20% complete for Site_D1_RNA_1.fastq.gz
+Approx 20% complete for Site_D1_RNA_2.fastq.gz
+Approx 25% complete for Site_D1_RNA_1.fastq.gz
+Approx 25% complete for Site_D1_RNA_2.fastq.gz
+Approx 30% complete for Site_D1_RNA_1.fastq.gz
+Approx 30% complete for Site_D1_RNA_2.fastq.gz
+Approx 35% complete for Site_D1_RNA_1.fastq.gz
+Approx 35% complete for Site_D1_RNA_2.fastq.gz
+Approx 40% complete for Site_D1_RNA_1.fastq.gz
+Approx 40% complete for Site_D1_RNA_2.fastq.gz
+Approx 45% complete for Site_D1_RNA_1.fastq.gz
+Approx 45% complete for Site_D1_RNA_2.fastq.gz
+Approx 50% complete for Site_D1_RNA_1.fastq.gz
+Approx 50% complete for Site_D1_RNA_2.fastq.gz
+Approx 55% complete for Site_D1_RNA_1.fastq.gz
+Approx 55% complete for Site_D1_RNA_2.fastq.gz
+Approx 60% complete for Site_D1_RNA_1.fastq.gz
+Approx 60% complete for Site_D1_RNA_2.fastq.gz
+Approx 65% complete for Site_D1_RNA_1.fastq.gz
+Approx 65% complete for Site_D1_RNA_2.fastq.gz
+Approx 70% complete for Site_D1_RNA_1.fastq.gz
+Approx 70% complete for Site_D1_RNA_2.fastq.gz
+Approx 75% complete for Site_D1_RNA_1.fastq.gz
+Approx 75% complete for Site_D1_RNA_2.fastq.gz
+Approx 80% complete for Site_D1_RNA_1.fastq.gz
+Approx 80% complete for Site_D1_RNA_2.fastq.gz
+Approx 85% complete for Site_D1_RNA_1.fastq.gz
+Approx 85% complete for Site_D1_RNA_2.fastq.gz
+Approx 90% complete for Site_D1_RNA_1.fastq.gz
+Approx 90% complete for Site_D1_RNA_2.fastq.gz
+Approx 95% complete for Site_D1_RNA_1.fastq.gz
+Approx 95% complete for Site_D1_RNA_2.fastq.gz
+Analysis complete for Site_D1_RNA_1.fastq.gz
+Analysis complete for Site_D1_RNA_2.fastq.gz
+Started analysis of Site_D3_RNA_1.fastq.gz
+Started analysis of Site_D3_RNA_2.fastq.gz
+Approx 5% complete for Site_D3_RNA_1.fastq.gz
+Approx 5% complete for Site_D3_RNA_2.fastq.gz
+Approx 10% complete for Site_D3_RNA_1.fastq.gz
+Approx 10% complete for Site_D3_RNA_2.fastq.gz
+Approx 15% complete for Site_D3_RNA_1.fastq.gz
+Approx 15% complete for Site_D3_RNA_2.fastq.gz
+Approx 20% complete for Site_D3_RNA_1.fastq.gz
+Approx 20% complete for Site_D3_RNA_2.fastq.gz
+Approx 25% complete for Site_D3_RNA_1.fastq.gz
+Approx 25% complete for Site_D3_RNA_2.fastq.gz
+Approx 30% complete for Site_D3_RNA_1.fastq.gz
+Approx 30% complete for Site_D3_RNA_2.fastq.gz
+Approx 35% complete for Site_D3_RNA_1.fastq.gz
+Approx 35% complete for Site_D3_RNA_2.fastq.gz
+Approx 40% complete for Site_D3_RNA_1.fastq.gz
+Approx 40% complete for Site_D3_RNA_2.fastq.gz
+Approx 45% complete for Site_D3_RNA_1.fastq.gz
+Approx 45% complete for Site_D3_RNA_2.fastq.gz
+Approx 50% complete for Site_D3_RNA_1.fastq.gz
+Approx 50% complete for Site_D3_RNA_2.fastq.gz
+Approx 55% complete for Site_D3_RNA_1.fastq.gz
+Approx 55% complete for Site_D3_RNA_2.fastq.gz
+Approx 60% complete for Site_D3_RNA_1.fastq.gz
+Approx 60% complete for Site_D3_RNA_2.fastq.gz
+Approx 65% complete for Site_D3_RNA_1.fastq.gz
+Approx 65% complete for Site_D3_RNA_2.fastq.gz
+Approx 70% complete for Site_D3_RNA_1.fastq.gz
+Approx 70% complete for Site_D3_RNA_2.fastq.gz
+Approx 75% complete for Site_D3_RNA_1.fastq.gz
+Approx 75% complete for Site_D3_RNA_2.fastq.gz
+Approx 80% complete for Site_D3_RNA_1.fastq.gz
+Approx 80% complete for Site_D3_RNA_2.fastq.gz
+Approx 85% complete for Site_D3_RNA_1.fastq.gz
+Approx 85% complete for Site_D3_RNA_2.fastq.gz
+Approx 90% complete for Site_D3_RNA_1.fastq.gz
+Approx 90% complete for Site_D3_RNA_2.fastq.gz
+Approx 95% complete for Site_D3_RNA_1.fastq.gz
+Approx 95% complete for Site_D3_RNA_2.fastq.gz
+Analysis complete for Site_D3_RNA_1.fastq.gz
+Analysis complete for Site_D3_RNA_2.fastq.gz

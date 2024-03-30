@@ -3,19 +3,43 @@
 #SBATCH -M snowy
 #SBATCH -p core
 #SBATCH -n 2
-#SBATCH -t 07:00:00
-#SBATCH -J Metagenome Assembly 
+#SBATCH -t 08:00:00
+#SBATCH -J Metagenome_Assembly 
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user matias.becker-burgos.1399@student.uu.se
 
 
 # Load modules
 module load bioinfo-tools
-module load Megahit
+module load megahit
+module load quast
+
+# input value
+
+DNA_Trimmed=/home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/DNA_trimmed/
+
+Assembly=/home/matiab/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly/
+
+Evaluation_Folder=/home/matiab/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly_Evaluation/
 
 # Commands 
 
-# Create new directory 
+# Create new directory for Assembly and evaluation 
 
 mkdir ~/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly
 
+mkdir ~/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly_Evaluation
+
+# Run Metagenomic Assembly 
+
+megahit --kmin-1pass --k-min 65 --k-max 105 --k-step 10 \
+-1 ${DNA_Trimmed}*_1.paired.trimmed.fastq.gz \
+-2 ${DNA_Trimmed}*_2.paired.trimmed.fastq.gz \
+-o ${Assembly}
+
+# Run the assembly evalution 
+
+metaquast.py -t 2 ${Assembly} -o ${Evaluation_Folder} \
+-1 ${DNA_Trimmed}*_1.paired.trimmed.fastq.gz \
+-2 ${DNA_Trimmed}*_2.paired.trimmed.fastq.gz
+ 

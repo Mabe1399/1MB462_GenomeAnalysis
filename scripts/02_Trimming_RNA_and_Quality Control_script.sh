@@ -17,23 +17,25 @@ module load FastQC
 
 # Run the trimming software for site_D1_RNA
 
-java -jar $TRIMMOMATIC_ROOT/trimmomatic.jar PE \
--trimlog ~/1MB461_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA.trimlog \
--basein ~/1MB462_GenomeAnalysis/01_Raw_Data/RNA_Untrimmed/Site_D1_RNA_1.fastq.gz \
+java -jar $TRIMMOMATIC_ROOT/trimmomatic.jar PE -threads 2 \
+-trimlog ~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA \
+-basein ~/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/Site_D1_RNA_1.fastq.gz \
 ~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_1.unpaired.trimmed.fastq.gz \
 ~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_1.paired.trimmed.fastq.gz \
 ~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_2.unpaired.trimmed.fastq.gz \
-~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_2.paired.trimmed.fastq.gz
+~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_2.paired.trimmed.fastq.gz \
+ILLUMINACLIP:$TRIMMOMATIC_ROOT/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 # Run the trimming software for	site_D3_RNA
 
-java -jar $TRIMMOMATIC_ROOT/trimmomatic.jar PE \
+java -jar $TRIMMOMATIC_ROOT/trimmomatic.jar PE -threads 2 \
 -trimlog ~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA \
--basein ~/1MB462_GenomeAnalysis/01_Raw_Data/RNA_Untrimmed/Site_D3_RNA_1.fastq.gz \
+-basein ~/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/Site_D3_RNA_1.fastq.gz \
 ~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_1.unpaired.trimmed.fastq.gz \
 ~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_1.paired.trimmed.fastq.gz \
 ~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_2.unpaired.trimmed.fastq.gz \
-~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_2.paired.trimmed.fastq.gz
+~/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_2.paired.trimmed.fastq.gz \
+ILLUMINACLIP:$TRIMMOMATIC_ROOT/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 # Create new directory for Quality control
 

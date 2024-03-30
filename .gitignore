@@ -1,3 +1,5 @@
 # File to ignore
 *.zip
 *.gz
+*.trimlog
+*.out

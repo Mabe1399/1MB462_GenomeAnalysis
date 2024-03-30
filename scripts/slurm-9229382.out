@@ -1,0 +1,101 @@
+trimmomatic/0.39 loaded, see 'module help trimmomatic/0.39' for more information.
+TrimmomaticPE: Started with arguments:
+ -threads 2 -trimlog /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA -basein /home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/Site_D1_RNA_1.fastq.gz /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_1.unpaired.trimmed.fastq.gz /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_1.paired.trimmed.fastq.gz /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_2.unpaired.trimmed.fastq.gz /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D1_RNA_2.paired.trimmed.fastq.gz ILLUMINACLIP:/sw/bioinfo/trimmomatic/0.39/snowy/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using templated Input files: /home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/Site_D1_RNA_1.fastq.gz /home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/Site_D1_RNA_2.fastq.gz
+java.io.FileNotFoundException: /sw/bioinfo/trimmomatic/0.39/rackham/TruSeq3-PE.fa (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.usadellab.trimmomatic.fasta.FastaParser.parse(FastaParser.java:54)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.loadSequences(IlluminaClippingTrimmer.java:110)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.makeIlluminaClippingTrimmer(IlluminaClippingTrimmer.java:71)
+	at org.usadellab.trimmomatic.trim.TrimmerFactory.makeTrimmer(TrimmerFactory.java:32)
+	at org.usadellab.trimmomatic.Trimmomatic.createTrimmers(Trimmomatic.java:59)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:552)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
+Quality encoding detected as phred33
+Input Read Pairs: 1304686 Both Surviving: 1161923 (89.06%) Forward Only Surviving: 117934 (9.04%) Reverse Only Surviving: 10245 (0.79%) Dropped: 14584 (1.12%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments:
+ -threads 2 -trimlog /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA -basein /home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/Site_D3_RNA_1.fastq.gz /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_1.unpaired.trimmed.fastq.gz /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_1.paired.trimmed.fastq.gz /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_2.unpaired.trimmed.fastq.gz /home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming/Site_D3_RNA_2.paired.trimmed.fastq.gz ILLUMINACLIP:/sw/bioinfo/trimmomatic/0.39/snowy/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using templated Input files: /home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/Site_D3_RNA_1.fastq.gz /home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/RNA_untrimmed/Site_D3_RNA_2.fastq.gz
+java.io.FileNotFoundException: /sw/bioinfo/trimmomatic/0.39/rackham/TruSeq3-PE.fa (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.usadellab.trimmomatic.fasta.FastaParser.parse(FastaParser.java:54)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.loadSequences(IlluminaClippingTrimmer.java:110)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.makeIlluminaClippingTrimmer(IlluminaClippingTrimmer.java:71)
+	at org.usadellab.trimmomatic.trim.TrimmerFactory.makeTrimmer(TrimmerFactory.java:32)
+	at org.usadellab.trimmomatic.Trimmomatic.createTrimmers(Trimmomatic.java:59)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:552)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
+Quality encoding detected as phred33
+Input Read Pairs: 1213040 Both Surviving: 1080928 (89.11%) Forward Only Surviving: 110241 (9.09%) Reverse Only Surviving: 9112 (0.75%) Dropped: 12759 (1.05%)
+TrimmomaticPE: Completed successfully
+mkdir: cannot create directory ‘/home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Quality_Control/RNA_Trimmed’: File exists
+Started analysis of Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 5% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 10% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 15% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Started analysis of Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 5% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 20% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 15% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 25% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 35% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 25% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 45% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 55% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 65% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 75% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 85% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 30% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 95% complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Analysis complete for Site_D1_RNA_2.paired.trimmed.fastq.gz
+Approx 35% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 40% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 45% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 50% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 55% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 60% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 65% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 70% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 75% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 80% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 85% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 90% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Approx 95% complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Analysis complete for Site_D1_RNA_1.paired.trimmed.fastq.gz
+Started analysis of Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 5% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 10% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 15% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 20% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 25% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 30% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 35% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Started analysis of Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 40% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 10% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 20% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 30% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 45% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 40% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 50% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 65% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 75% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 50% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 85% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 95% complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Analysis complete for Site_D3_RNA_2.paired.trimmed.fastq.gz
+Approx 55% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 60% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 65% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 70% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 75% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 80% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 85% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 90% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Approx 95% complete for Site_D3_RNA_1.paired.trimmed.fastq.gz
+Analysis complete for Site_D3_RNA_1.paired.trimmed.fastq.gz

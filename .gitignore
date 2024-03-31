@@ -6,5 +6,10 @@
 *_fastqc.html
 *.txt
 *.svg
-*.png
+*.pdf
 *.json
+*.fa
+*.fasta
+*.info
+done
+log

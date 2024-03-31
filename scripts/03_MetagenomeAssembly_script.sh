@@ -3,7 +3,7 @@
 #SBATCH -M snowy
 #SBATCH -p core
 #SBATCH -n 2
-#SBATCH -t 08:00:00
+#SBATCH -t 09:00:00
 #SBATCH -J Metagenome_Assembly 
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user matias.becker-burgos.1399@student.uu.se
@@ -22,22 +22,30 @@ Output=/home/matiab/1MB462_GenomeAnalysis/03_Metagenome_Assembly
 
 # Commands 
 
-# Create new directory for Evaluation 
+# Make new directory for Metagenome Assembly and evaluation 
 
-mkdir ~/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly_Evaluation
+mkdir ~/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly
 
 # Run Metagenomic Assembly 
 
 megahit --kmin-1pass --k-min 65 --k-max 105 --k-step 10 \
--1 ${DNA_Trimmed}/Site_D1_DNA_1.paired.trimmed.fastq.gz,\
-${DNA_Trimmed}/Site_D3_DNA_1.paired.trimmed.fastq.gz \
--2 ${DNA_Trimmed}/Site_D1_DNA_2.paired.trimmed.fastq.gz,\
-${DNA_Trimmed}/Site_D3_DNA_2.paired.trimmed.fastq.gz \
--o ${Output}/Assembly/
+-1 ${DNA_Trimmed}/Site_D1_DNA_1.paired.trimmed.fastq.gz \
+-2 ${DNA_Trimmed}/Site_D1_DNA_2.paired.trimmed.fastq.gz \
+-o ${Output}/Assembly/Site_D1_Assembly/
+
+megahit --kmin-1pass --k-min 65 --k-max 105 --k-step 10 \
+-1 ${DNA_Trimmed}/Site_D3_DNA_1.paired.trimmed.fastq.gz \
+-2 ${DNA_Trimmed}/Site_D3_DNA_2.paired.trimmed.fastq.gz \
+-o ${Output}/Assembly/Site_D3_Assembly/
 
 # Run the assembly evalution 
 
-metaquast.py -t 2 ${Output}/Assembly/ -o ${Output}/Assembly_Evaluation/ \
--1 ${DNA_Trimmed}/*_1.paired.trimmed.fastq.gz \
--2 ${DNA_Trimmed}/*_2.paired.trimmed.fastq.gz
- 
+metaquast.py ${Output}/Assembly/Site_D1_Assembly/final.contigs.fa \
+-o ${Output}/Site_D1_Assembly_Evaluation/ -t 2 \
+-1 ${DNA_Trimmed}/Site_D1_DNA_1.paired.trimmed.fastq.gz \
+-2 ${DNA_Trimmed}/Site_D1_DNA_2.paired.trimmed.fastq.gz 
+
+metaquast.py ${Output}/Assembly/Site_D3_Assembly/final.contigs.fa \
+-o ${Output}/Site_D3_Assembly_Evaluation/ -t 2 \
+-1 ${DNA_Trimmed}/Site_D3_DNA_1.paired.trimmed.fastq.gz \
+-2 ${DNA_Trimmed}/Site_D3_DNA_2.paired.trimmed.fastq.gz

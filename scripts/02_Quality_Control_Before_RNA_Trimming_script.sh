@@ -12,6 +12,7 @@
 module load bioinfo-tools
 module load FastQC
 module load MultiQC
+
 # Commands 
 
 # Create new directories for the results

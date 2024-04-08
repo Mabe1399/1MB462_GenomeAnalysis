@@ -12,4 +12,11 @@
 *.fasta
 *.info
 done
-log
+*.log
+*.tsv
+*.tex
+*.sf
+*.unaligned
+*.coords*
+*.stderr
+*.stdout

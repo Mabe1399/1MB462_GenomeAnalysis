@@ -8,7 +8,7 @@
 *.svg
 *.pdf
 *.json
-*.fa
+*.fa*
 *.fasta
 *.info
 done
@@ -20,3 +20,4 @@ done
 *.coords*
 *.stderr
 *.stdout
+*.bam

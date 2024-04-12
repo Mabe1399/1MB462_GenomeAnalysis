@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 15:00:00
-#SBATCH -J DNA_Mapping 
+#SBATCH -J RNA_Mapping 
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user matias.becker-burgos.1399@student.uu.se
 
@@ -16,52 +16,55 @@ module load samtools
 
 # Path of files to iterate
 
-DNA_Assembly=/home/matiab/1MB462_GenomeAnalysis/03_Metagenome_Assembly/Assembly
+Bins=/home/matiab/1MB462_GenomeAnalysis/04_Binning/Bins
 
-Raw_DNA=/home/matiab/1MB462_GenomeAnalysis/01_Raw_Data/DNA_trimmed
+Trimmed_RNA=/home/matiab/1MB462_GenomeAnalysis/02_Preprocessing/Trimming
 
-Output=/home/matiab/1MB462_GenomeAnalysis/04_Binning
+Output=/home/matiab/1MB462_GenomeAnalysis/06_Analysis_of_Expression
 
 # Make temporary folder
-tmpdir=$SNIC_TMP/DNA_Mapping
+tmpdir=$SNIC_TMP/RNA_Mapping
 mkdir $tmpdir
 mkdir $tmpdir/Data
 
-#Makw temporary copies of relevent files 
-cp $DNA_Assembly/Site_D1_Assembly/Site_D1_final.contigs.fa $tmpdir/Data/
-cp $DNA_Assembly/Site_D3_Assembly/Site_D3_final.contigs.fa $tmpdir/Data/
+#Makw temporary copies of relevent files
+ 
+cp $Bins/Bin* $tmpdir/Data/
 
 # Create New directory
 
-mkdir ~/1MB462_GenomeAnalysis/04_Binning/DNA_Mapping
-mkdir ~/1MB462_GenomeAnalysis/04_Binning/DNA_Mapping/Site_D3_Database
+mkdir $Output/RNA_Mapping
 
-# Create Databases
+mkdir $Output/RNA_Mapping/Site_D1
 
-bwa index $tmpdir/Data/Site_D1_final.contigs.fa
+mkdir $Output/RNA_Mapping/Site_D3
 
-bwa index $tmpdir/Data/Site_D3_final.contigs.fa
+# Run alignement
 
-# Run the DNA alignement
+for x in $tmpdir/Data/
+do
+bwa index $tmpdir/Data/x
 
-bwa mem -t 2 $tmpdir/Data/Site_D1_final.contigs.fa \
-${Raw_DNA}/Site_D1_DNA_1.paired.trimmed.fastq.gz \
-${Raw_DNA}/Site_D1_DNA_2.paired.trimmed.fastq.gz > $tmpdir/Site_D1_DNA_Raw_mapping.sam
+bwa mem -t 2 $tmpdir/Data/x \
+${Trimmed_RNA}/Site_D1_RNA_1.paired.trimmed.fastq.gz \
+${Trimmed_RNA}/Site_D1_RNA_2.paired.trimmed.fastq.gz > $tmpdir/Site_D1_RNA_Raw_Mapping_{x}.sam
 
-bwa mem -t 2 $tmpdir/Data/Site_D3_final.contigs.fa \
-${Raw_DNA}/Site_D3_DNA_1.paired.trimmed.fastq.gz \
-${Raw_DNA}/Site_D3_DNA_2.paired.trimmed.fastq.gz > $tmpdir/Site_D3_DNA_Raw_mapping.sam
+bwa mem -t 2 $tmpdir/Data/x \
+${Trimmed_RNA}/Site_D1_RNA_1.paired.trimmed.fastq.gz \
+${Trimmed_RNA}/Site_D1_RNA_2.paired.trimmed.fastq.gz > $tmpdir/Site_D3_RNA_Raw_Mapping_{x}.sam
 
-# Run Samtools to create BAM file
+samtools sort $tmpdir/Site_D1_RNA_Raw_Mapping_{x}.sam \
+-o $tmpdir/Site_D1_RNA_Sorted_mapping{x}.bam 
 
-samtools sort $tmpdir/Site_D1_DNA_Raw_mapping.sam \
--o $tmpdir/Site_D1_DNA_Sorted_mapping.bam
- 
-rm $tmpdir/Site_D1_DNA_Raw_mapping.sam
+rm $tmpdir/Site_D1_RNA_Raw_Mapping_{x}.sam
 
-samtools sort $tmpdir/Site_D3_DNA_Raw_mapping.sam \
--o $tmpdir/Site_D3_DNA_sorted_mapping.bam
-rm $tmpdir/Site_D3_DNA_Raw_mapping.sam
+samtools sort $tmpdir/Site_D3_RNA_Raw_Mapping_{x}.sam \
+-o $tmpdir/Site_D3_RNA_Sorted_mapping_{x}.bam
+
+rm $tmpdir/Site_D3_RNA_Raw_Mapping_{x}.sam
+done
 
 # Copy desired file to my directory
-cp -r $tmpdir/*.bam $Output/DNA_Mapping
+cp -r $tmpdir/Site_D1*.bam $Output/RNA_Mapping/Site_D1
+
+cp -r $tmpdir/Site_D3*.bam $Output/RNA_Mapping/Site_D3

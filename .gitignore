@@ -21,3 +21,18 @@ done
 *.stderr
 *.stdout
 *.bam
+
+# path to be avoided 
+
+Log_Folder/
+multiqc_data/
+04_Binning/
+Assembly/
+
+combined_reference/
+icarus_viewers/
+Krona_charts/
+not_aligned/
+quast_downloaded_references/
+runs_per_reference/
+

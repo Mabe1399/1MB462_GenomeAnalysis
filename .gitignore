@@ -4,7 +4,6 @@
 *.trimlog
 *.out
 *_fastqc.html
-*.txt
 *.svg
 *.pdf
 *.json
@@ -21,14 +20,18 @@ done
 *.stderr
 *.stdout
 *.bam
+*.ms
 
 # path to be avoided 
 
 Log_Folder/
 multiqc_data/
-04_Binning/
+Bins/
+DNA_Mapping/
+storage/
+bins/
 Assembly/
-
+summary/
 combined_reference/
 icarus_viewers/
 krona_charts/

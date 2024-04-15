@@ -12,7 +12,7 @@
 # Load modules
 module load bioinfo-tools
 module load MetaBat
-module load CheckM
+module load CheckM/1.0.12
 
 # Path assesed 
 
@@ -67,6 +67,8 @@ checkm data setRoot $PWD
 
 checkm lineage_wf -t 4 -x fa --reduced_tree $tmpdir/Bins/ \
 $tmpdir/Results
+
+checkm qa $tmpdir/Results/lineage.ms checkm > checkm_quality_assesment.txt 
 
 # Retrieve the data 
 cp -r $tmpdir/Results/* ${Output}/Bins_Evaluation/

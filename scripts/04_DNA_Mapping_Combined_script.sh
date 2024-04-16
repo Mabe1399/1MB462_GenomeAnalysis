@@ -27,7 +27,7 @@ tmpdir=$SNIC_TMP/DNA_Mapping
 mkdir $tmpdir
 mkdir $tmpdir/Data
 
-#Makw temporary copies of relevent files 
+#Make temporary copies of relevent files 
 cp ${DNA_Assembly}/Combined_Assembly/final.contigs.fa $tmpdir/Data/
 
 # Create New directory

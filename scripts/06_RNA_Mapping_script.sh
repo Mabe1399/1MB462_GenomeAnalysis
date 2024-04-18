@@ -28,7 +28,7 @@ mkdir $tmpdir
 mkdir $tmpdir/Data
 
 # Make temporary copies of relevent files
-cp ${Bins}/*.fa $tmpdir/Data/
+cp ${Bins}/Bins_5.fa ${Bins}/Bins_16.fa ${Bins}/Bins_29.fa ${Bins}/Bins_12.fa $tmpdir/Data/
 
 # Create New directory
 
@@ -39,27 +39,25 @@ for x in $tmpdir/Data/* ; do
 
 bwa index $x 
 
-bwa mem -t 2 $x \
+bwa mem -t 2 $x -p \
 ${Trimmed_RNA}/Site_D1_RNA_1.paired.trimmed.fastq.gz \
-${Trimmed_RNA}/Site_D1_RNA_2.paired.trimmed.fastq.gz \
-> $tmpdir/Site_D1_RNA_{x}_Raw_mapping.sam
+${Trimmed_RNA}/Site_D1_RNA_2.paired.trimmed.fastq.gz > ${x}_D1.sam
 
-bwa mem -t 2 $x \
+bwa mem -t 2 $x -p \
 ${Trimmed_RNA}/Site_D3_RNA_1.paired.trimmed.fastq.gz \
-${Trimmed_RNA}/Site_D3_RNA_2.paired.trimmed.fastq.gz \
-> $tmpdir/Site_D3_RNA_{x}_Raw_mapping.sam
+${Trimmed_RNA}/Site_D3_RNA_2.paired.trimmed.fastq.gz > ${x}_D3.sam
 
 # Run Samtools to create BAM file
 
-samtools sort $tmpdir/Site_D1_RNA_{x}_Raw_mapping.sam > \
--o $tmpdir/Site_D1_RNA_{x}_Sorted_mapping.bam 
+samtools sort ${x}_D1.sam \
+-o ${x}_D1.bam 
 
-samtools sort $tmpdir/Site_D3_RNA_{x}_Raw_mapping.sam > \
--o $tmpdir/Site_D3_RNA_{x}_Sorted_mapping.bam
+samtools sort ${x}_D3.sam \
+-o ${x}_D3.bam
 
-rm $tmpdir/Site_*_RNA_{x}_Raw_mapping.sam
+rm $tmpdir/Data/*.sam
+
+# Retrieve the Data
+cp -r $tmpdir/Data/*.bam $Output/RNA_Mapping
+
 done
-
-# Retrieve the Data 
-
-cp -r $tmpdir/*.bam $Output/RNA_Mapping

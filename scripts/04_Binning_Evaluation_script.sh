@@ -24,7 +24,7 @@ Output=/home/matiab/1MB462_GenomeAnalysis/04_Binning
 
 # Create New directory
 
-mkdir ~/1MB462_GenomeAnalysis/04_Binning/Bins  
+mkdir ~/1MB462_GenomeAnalysis/04_Binning/Bins 
 
 mkdir ~/1MB462_GenomeAnalysis/04_Binning/Bins_Evaluation
 
@@ -33,14 +33,14 @@ cd ${Output}/Bins/
 # Run the binning software
 # Create the depth files 
 
-#jgi_summarize_bam_contig_depths --outputDepth depth_Combined.txt \
-#${Mapped_DNA}/Combined_DNA_Sorted_mapping_D1.bam \
-#${Mapped_DNA}/Combined_DNA_Sorted_mapping_D3.bam
+jgi_summarize_bam_contig_depths --outputDepth depth_Combined.txt \
+${Mapped_DNA}/Combined_DNA_Sorted_mapping_D1.bam \
+${Mapped_DNA}/Combined_DNA_Sorted_mapping_D3.bam
 
 # Run MetaBat  
 
-#metabat2 -t 2 -i ${DNA_assembly}/Combined_Assembly/final.contigs.fa \
-#-a ${Output}/Bins/depth_Combined.txt -o ${Output}/Bins
+metabat2 -t 2 -i ${DNA_assembly}/Combined_Assembly/final.contigs.fa \
+-a ${Output}/Bins_2/depth_Combined.txt -o ${Output}/Bins
 
 # Create temporary directories
 
@@ -68,7 +68,11 @@ checkm data setRoot $PWD
 checkm lineage_wf -t 4 -x fa --reduced_tree $tmpdir/Bins/ \
 $tmpdir/Results
 
-checkm qa $tmpdir/Results/lineage.ms checkm > checkm_quality_assesment.txt 
+checkm qa $tmpdir/Results/lineage.ms $tmpdir/Results > checkm_quality_assesment.txt 
 
 # Retrieve the data 
 cp -r $tmpdir/Results/* ${Output}/Bins_Evaluation/
+
+mkdir $Output/Bins_Evaluation/Plot
+
+checkm bin_qa_plot --image_type png $Output/Bins_Evaluation/storage/q_aai $Output/Bins $Output/Bins_Evaluation/Plot

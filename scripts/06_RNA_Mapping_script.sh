@@ -39,11 +39,11 @@ for x in $tmpdir/Data/* ; do
 
 bwa index $x 
 
-bwa mem -t 2 $x -p \
+bwa mem -t 2 $x -P \
 ${Trimmed_RNA}/Site_D1_RNA_1.paired.trimmed.fastq.gz \
 ${Trimmed_RNA}/Site_D1_RNA_2.paired.trimmed.fastq.gz > ${x}_D1.sam
 
-bwa mem -t 2 $x -p \
+bwa mem -t 2 $x -P \
 ${Trimmed_RNA}/Site_D3_RNA_1.paired.trimmed.fastq.gz \
 ${Trimmed_RNA}/Site_D3_RNA_2.paired.trimmed.fastq.gz > ${x}_D3.sam
 

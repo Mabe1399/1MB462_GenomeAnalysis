@@ -40,11 +40,11 @@ bwa index $tmpdir/Data/final.contigs.fa
 
 # Run the DNA alignement
 
-bwa mem -t 2 $tmpdir/Data/final.contigs.fa -p \
+bwa mem -t 2 $tmpdir/Data/final.contigs.fa -P \
 ${Raw_DNA}/Site_D1_DNA_1.paired.trimmed.fastq.gz \
 ${Raw_DNA}/Site_D1_DNA_2.paired.trimmed.fastq.gz > $tmpdir/Combined_DNA_Raw_mapping_D1.sam
 
-bwa mem -t 2 $tmpdir/Data/final.contigs.fa -p \
+bwa mem -t 2 $tmpdir/Data/final.contigs.fa -P \
 ${Raw_DNA}/Site_D3_DNA_1.paired.trimmed.fastq.gz \
 ${Raw_DNA}/Site_D3_DNA_2.paired.trimmed.fastq.gz > $tmpdir/Combined_DNA_Raw_mapping_D3.sam
 

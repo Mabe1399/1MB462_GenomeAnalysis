@@ -12,7 +12,6 @@
 *.info
 done
 *.log
-*.tsv
 *.tex
 *.sf
 *.unaligned
@@ -22,12 +21,12 @@ done
 *.bam
 *.ms
 *count.txt
+*.cfg
 
 # path to be avoided 
-
 Log_Folder/
 multiqc_data/
-Bins/
+04_Binning/Bins/
 DNA_Mapping/
 storage/
 bins/
@@ -41,4 +40,8 @@ quast_downloaded_references/
 runs_per_reference/
 05_Annotation/
 06_Analysis_of_Expression/
-07_Phylogeny/
+phylophlan_databases/
+Results/
+Bins_dists/
+Bins_sketches/
+Bins_prefiltering/

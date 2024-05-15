@@ -59,8 +59,10 @@ samtools sort $tmpdir/Bins_${x}_D1.sam \
 samtools sort $tmpdir/Bins_${x}_D3.sam \
 -o $tmpdir/Bins_${x}_D3.bam
 
-samtools coverage $tmpdir/Bins_${x}_D1.bam > $tmpdir/Bins_${x}_D1_stats.txt
-samtools coverage $tmpdir/Bins_${x}_D3.bam > $tmpdir/Bins_${x}_D3_stats.txt
+#samtools coverage $tmpdir/Bins_${x}_D1.bam > $tmpdir/Bins_${x}_D1_stats.txt
+#samtools coverage $tmpdir/Bins_${x}_D3.bam > $tmpdir/Bins_${x}_D3_stats.txt
+htseq-count -f bam -r pos -t CDS -i ID --stranded=no $tmpdir/Bins_${x}_D1.bam <( sed '/##FASTA/,$d' $Bins_Annotation/${x}/${x}.gff) > $tmpdir/Bins_${x}_D1_count.txt
+htseq-count -f bam -r pos -t CDS -i ID --stranded=no $tmpdir/Bins_${x}_D3.bam <( sed '/##FASTA/,$d' $Bins_Annotation/${x}/${x}.gff) > $tmpdir/Bins_${x}_D3_count.txt
 
 rm $tmpdir/*.sam
 
